@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Future Beats</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body style="
+      background: url('paginaprincipal.jpg') no-repeat center center/cover;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    ">
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">🎵 Future Beats</a>
+    <a href="login.html" class="btn btn-outline-light">
+      <i class="bi bi-person-circle"></i> Entrar
+    </a>
+  </div>
+</nav>
+
+<!-- Seção Estilos Musicais -->
+<div class="container mt-5 pt-5">
+  <h2 style="font-size: 1.8rem; margin-bottom: 40px;" class="text-white text-center">
+    Aqui você irá encontrar os estilos mais famosos de música, como:
+  </h2>
+
+  <div class="row justify-content-center text-center">
+    <!-- Sertanejo -->
+    <div class="col-md-3 col-10">
+      <a href="paginasertanejo.html">
+        <img src="sertanejo.jpg" alt="Sertanejo"
+             style="border-radius: 15px; width: 100%; transition: transform 0.3s, box-shadow 0.3s;"
+             onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 25px #f0f';"
+             onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+      </a>
+      <p class="text-white mt-2 fw-bold">Sertanejo</p>
+    </div>
+
+    <!-- Bossa Nova -->
+    <div class="col-md-3 col-10">
+      <a href="bossanova.html">
+        <img src="fotodebossanova.jpg" alt="Bossa Nova"
+             style="border-radius: 15px; width: 97%; transition: transform 0.3s, box-shadow 0.3s;"
+             onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 25px #f0f';"
+             onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+      </a>
+      <p class="text-white mt-2 fw-bold">Bossa nova</p>
+    </div>
+
+    <!-- Midnight Jazz -->
+    <div class="col-md-3 col-10">
+      <a href="jazz.html">
+        <img src="capadoalbummidnigthjazz.png" alt="Midnight Jazz"
+             style="border-radius: 15px; width: 100%; transition: transform 0.3s, box-shadow 0.3s;"
+             onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 25px #f0f';"
+             onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+      </a>
+      <p class="text-white mt-2 fw-bold">Midnight jazz</p>
+    </div>
+  </div>
+</div>
+
+<!-- Player Dinâmico -->
+<div class="container mt-5 p-4" style="background: rgba(0,0,0,0.7); border-radius: 20px; box-shadow: 0 0 20px #f0f;">
+  <div class="row">
+    
+    <!-- Player -->
+    <div class="col-md-4 text-white">
+      <h3 class="mb-4">Escute nossas músicas</h3>
+      <div class="p-3 bg-dark rounded" style="border-radius: 15px;">
+        <img id="player-img" src="axedabahia.jpg" alt="Axé" class="img-fluid rounded mb-3">
+        <p id="player-title" class="fw-bold">Axé da Bahia</p>
+        <audio id="player-audio" controls class="w-100 mb-3">
+          <source src="axe.mp3" type="audio/mpeg">
+          Seu navegador não suporta áudio.
+        </audio>
+        <div class="d-flex justify-content-center gap-3">
+          <button class="btn btn-outline-light rounded-circle"><i class="bi bi-skip-backward-fill"></i></button>
+          <button class="btn btn-outline-light rounded-circle" onclick="document.getElementById('player-audio').play()"><i class="bi bi-play-fill"></i></button>
+          <button class="btn btn-outline-light rounded-circle" onclick="document.getElementById('player-audio').pause()"><i class="bi bi-pause-fill"></i></button>
+          <button class="btn btn-outline-danger rounded-circle"><i class="bi bi-heart-fill"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid de músicas -->
+    <div class="col-md-8">
+      <div class="row row-cols-2 row-cols-md-4 g-3">
+
+        <!-- Pagode -->
+        <div class="col">
+          <img src="pagode.jpg" alt="Pagode"
+               class="img-fluid rounded album"
+               data-title="Pagodão da Alegria"
+               data-img="pagode.jpg"
+               data-audio="swayinthesand.mp3">
+        </div>
+
+        <!-- Classica -->
+        <div class="col">
+          <img src="eternocompasso.jpg" alt="Classica"
+               class="img-fluid rounded album"
+               data-title="Eterno Compasso"
+               data-img="eternocompasso.jpg"
+               data-audio="whispersofthewillow.mp3">
+        </div>
+
+        <!-- Melody -->
+        <div class="col">
+          <img src="funkdoamor.jpg" alt="Melody"
+               class="img-fluid rounded album"
+               data-title="Funk do amor"
+               data-img="funkdoamor.jpg"
+               data-audio="dancingthroughthenight.mp3">
+        </div>
+
+        <!-- Metal -->
+        <div class="col">
+          <img src="guitarflames.jpg" alt="Metal"
+               class="img-fluid rounded album"
+               data-title="Guitar Flames"
+               data-img="guitarflames.jpg"
+               data-audio="rock.mp3">
+        </div>
+
+        <!-- Samba -->
+        <div class="col">
+          <img src="sambadaalma.jpg" alt="Samba"
+               class="img-fluid rounded album"
+               data-title="Samba da alma"
+               data-img="sambadaalma.jpg"
+               data-audio="dancingintherain.mp3">
+        </div>
+
+        <!-- Gospel -->
+        <div class="col">
+          <img src="luzdivina.jpg" alt="Gospel"
+               class="img-fluid rounded album"
+               data-title="Luz divina"
+               data-img="luzdivina.jpg"
+               data-audio="luzdivina.mp3">
+        </div>
+
+        <!-- Funk -->
+        <div class="col">
+          <img src="batidadegueto.jpg" alt="Funk"
+               class="img-fluid rounded album"
+               data-title="Batida do Gueto"
+               data-img="batidadegueto.jpg"
+               data-audio="batidadogueto.mp3">
+        </div>
+
+        <!-- Rock -->
+        <div class="col">
+          <img src="steelofdarkness.jpg" alt="Rock"
+               class="img-fluid rounded album"
+               data-title="Steel of Darkness"
+               data-img="steelofdarkness.jpg"
+               data-audio="rebelscream.mp3">
+        </div>
+
+        <!-- Baião -->
+        <div class="col">
+          <img src="raizesdobaiao.jpg" alt="Baião"
+               class="img-fluid rounded album"
+               data-title="Raizes do Baião"
+               data-img="raizesdobaiao.jpg"
+               data-audio="baiao.mp3">
+        </div>
+
+        <!-- Midnight Jazz -->
+        <div class="col">
+          <img src="midnightjazz.jpg" alt="Jazz"
+               class="img-fluid rounded album"
+               data-title="Midnight Jazz"
+               data-img="midnightjazz.jpg"
+               data-audio="midnightreverie.mp3">
+        </div>
+
+        <!-- Miami -->
+        <div class="col">
+          <img src="miamiheat.jpg" alt="Miami"
+               class="img-fluid rounded album"
+               data-title="Miami Heat"
+               data-img="miamiheat.jpg"
+               data-audio="pixelfunkfever.mp3">
+        </div>
+
+        <!-- Blues -->
+        <div class="col">
+          <img src="bluesoul.jpg" alt="Blues"
+               class="img-fluid rounded album"
+               data-title="Blues Soul"
+               data-img="bluesoul.jpg"
+               data-audio="blues.mp3">
+        </div>
+
+        <!-- MPB -->
+        <div class="col">
+          <img src="coresdobrasil.jpg" alt="mpb"
+               class="img-fluid rounded album"
+               data-title="Cores do Brasil"
+               data-img="coresdobrasil.jpg"
+               data-audio="dancinginthebreeze.mp3">
+        </div>
+
+        <!-- Bossa Nova -->
+        <div class="col">
+          <img src="wavesofrio.jpg" alt="bossanova"
+               class="img-fluid rounded album"
+               data-title="Waves of Rio"
+               data-img="wavesofrio.jpg"
+               data-audio="whisperedbreezes.mp3">
+        </div>
+
+        <!-- Eletrônica -->
+        <div class="col">
+          <img src="digitaldreams.jpg" alt="eletronica"
+               class="img-fluid rounded album"
+               data-title="Digital Dreams"
+               data-img="digitaldreams.jpg"
+               data-audio="eletronica.mp3">
+        </div>
+
+        <!-- Soul -->
+        <div class="col">
+          <img src="deepsoul.jpg" alt="Soul"
+               class="img-fluid rounded album"
+               data-title="Deep Soul"
+               data-img="deepsoul.jpg"
+               data-audio="shadowsinthegarden.mp3">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const albums = document.querySelectorAll('.album');
+  const playerImg = document.getElementById('player-img');
+  const playerTitle = document.getElementById('player-title');
+  const playerAudio = document.getElementById('player-audio');
+
+  albums.forEach(album => {
+    album.addEventListener('click', () => {
+      const title = album.getAttribute('data-title');
+      const img = album.getAttribute('data-img');
+      const audio = album.getAttribute('data-audio');
+
+      playerImg.src = img;
+      playerTitle.textContent = title;
+      playerAudio.src = audio;
+      playerAudio.play();
+    });
+  });
+</script>
+
+</body>
+<br><br>
+<footer class="text-white py-5" style="background: linear-gradient(90deg, #2c003e, #4b0082);">
+  <div class="container">
+    <div class="row">
+
+      <!-- Empresa -->
+      <div class="col-md-2 col-6 mb-3">
+        <h6 class="fw-bold">Empresa</h6>
+        <ul class="list-unstyled">
+          <li><a href="sobre.html" class="text-white text-decoration-none">Sobre</a></li>
+          <li><a href="empregos.html" class="text-white text-decoration-none">Empregos</a></li>
+        </ul>
+      </div>
+
+      <!-- Comunidades -->
+      <div class="col-md-3 col-6 mb-3">
+        <h6 class="fw-bold">Comunidades</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">Para Artistas</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Desenvolvedores</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Publicidade</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Investidores</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Fornecedores</a></li>
+        </ul>
+      </div>
+
+      <!-- Links úteis -->
+      <div class="col-md-2 col-6 mb-3">
+        <h6 class="fw-bold">Links úteis</h6>
+        <ul class="list-unstyled">
+          <li><a href="suporte.html" class="text-white text-decoration-none">Suporte</a></li>
+          <li><a href="app.html" class="text-white text-decoration-none">Aplicativo</a></li>
+          <li><a href="popular.html" class="text-white text-decoration-none">Popular por país</a></li>
+        </ul>
+      </div>
+
+      <!-- Planos FB -->
+      <div class="col-md-3 col-6 mb-3">
+        <h6 class="fw-bold">Planos FB</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">FB Platinum</a></li>
+          <li><a href="#" class="text-white text-decoration-none">FB Gold</a></li>
+          <li><a href="#" class="text-white text-decoration-none">FB Gold Duo</a></li>
+          <li><a href="#" class="text-white text-decoration-none">FB Student</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Free FB</a></li>
+        </ul>
+      </div>
+
+      <!-- Plataformas digitais -->
+      <div class="col-md-2 col-6 mb-3">
+        <h6 class="fw-bold">Plataformas digitais</h6>
+        <ul class="list-unstyled">
+          <li><a href="https://instagram.com" target="_blank" class="text-white text-decoration-none">Instagram</a></li>
+          <li><a href="https://twitter.com" target="_blank" class="text-white text-decoration-none">Twitter</a></li>
+          <li><a href="https://facebook.com" target="_blank" class="text-white text-decoration-none">Facebook</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Linha inferior -->
+    <div class="text-center mt-4">
+      <small>©2025 Future Beats FB</small>
+    </div>
+  </div>
+</footer>
+
+</html>
